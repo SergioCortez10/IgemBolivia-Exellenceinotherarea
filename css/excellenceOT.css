@@ -245,21 +245,36 @@ figure {
   }
 }
 
+.card-certificados {
+  transition: 0.3s ease-in-out;
+}
+.card-certificados:hover {
+  box-shadow: 10px 10px 15px 2px #bfbfbfa3;
+  opacity: 1;
+  transform: scale(1.02);
+}
+
 .card_co {
+  width: 100%;
   display: flex;
-  gap: 50px;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 20px;
 }
 .card__perfil {
-  width: 310px;
+  width: 350px;
   padding: 20px;
   box-shadow: 1px 1px 5px rgb(201, 201, 201);
   border: solid rgba(3, 133, 255, 0) 2px;
   border-radius: 10px;
+  transition: 0.3s ease-in-out;
 }
 .card__perfil:hover {
   border: solid #7b0068 2px;
+  box-shadow: 10px 10px 15px 2px #bfbfbfa3;
+  opacity: 1;
+  transform: scale(1.02);
 }
 .card__perfil:hover img {
   transform: rotate(0);
@@ -282,12 +297,18 @@ figure {
 }
 .card__descripcion p {
   font-size: 14px;
+  color: black;
 }
 .enlace {
   background: rgb(0, 110, 255);
   padding: 8px 20px;
   color: white;
   text-decoration: none;
+}
+@media (max-width: 990px) {
+  .card__perfil {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
