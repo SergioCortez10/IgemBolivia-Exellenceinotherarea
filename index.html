@@ -11,12 +11,11 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/excellenceOT.css">
+    <link rel="stylesheet" href="botonflotante.css">
 </head>
-<body>
-
-    <header>
-        <!-- NavBar -->
-        <div class="nav-principal">
+<header>
+    <!-- NavBar -->
+    <div class="nav-principal">
             <nav class="navbar navbar-expand-lg navbar-light my-navbar fixed-top  py-4" id="nav">
                 <div class="container  d-md-flex">
                     <a class="navbar-brand" href="#"></a>
@@ -57,17 +56,38 @@
                     </div>
                 </div>
             </nav>
-        </div>
+    </div>
 
+    <!-- BOTON FLOTANTE -->
+    <div class="wrapper">
+            <input type="checkbox" />
+            <div class="fab"></div>
+            <div class="fac">
+                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Up"><i
+                        class="fas fa-chevron-up"></i></a>
+                <a type="button" onclick="aleatorio()" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Random Color"><i class="fas fa-random"></i></a>
+                <a onclick="modoNocturno()" id="luna" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Dark Mode"><i class="fas fa-moon"></i></a>
+                <a onclick="modoDia()" id="sol" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sun Mode"><i
+                        class="fas fa-sun"></i></a>
 
-        <!-- Banner de Imagenes -->
+                <a onclick="aumentarLetras()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Letter ++"><i
+                        class="fas fa-search-plus"></i></a>
+                <a onclick="disminuirLetras()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Letter --"><i
+                        class="fas fa-search-minus"></i></a>
+            </div>
+    </div>
 
-        <div class="pic-wrapper">
+    <!-- Banner de Imagenes -->
+    <div class="pic-wrapper">
             <figure class="pic-1">
             </figure>
             <figure class="pic-2">
             </figure>
             <figure class="pic-3">
+            </figure>
+            <figure class="pic-4">
             </figure>
             </figure>
             <div class="fondo-banner ">
@@ -77,181 +97,288 @@
                     <div class="team">
                         <h4 class="title-small text-center text-md-start"><span class="text-white">TEAM</span> BOLIVIA
                         </h4>
-                        <img src="imagenes/logoArsenito.png"
+                        <img src="logoArsenito.png"
                             class="logo-arsenito d-none d-md-block" alt="" />
                     </div>
                     <h1 class="text-center text-md-start text-white titulo-principal">EXELLENCE IN OTHER AREA</h1>
+                    <p class="text-white text-white text-sm-center text-md-start" style="font-size: 20px;"> “NO OPINION CAN NOT STAND DISCUSSION OR CRITICISM IS WORTH HOLDING” </p>
+                    <p class="text-white text-white text-sm-center text-md-start" style="font-size: 15px;">James E. Talmage</p>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <div class="bg p-5">
-        <div class="container">
-            <p>Inclusivity Award is part of iGEM Bolivia. The objective is the development of educational videos in the
-                native languages recognized in Bolivia: Aymara, Quechua and Guarani; the purpose of this activity is to
-                break the language barrier when
-                communicating science. In addition, to generate a positive impact on society by disseminating basic
-                knowledge about biology and biotechnology.</p>
-
-            <p>The contents of each video were previously reviewed by two of our instructors (Dr. Densy Pelaez and
-                Cecilia Gonzalez MS.C.), so that before being translated, the content was appropriate and had a clear
-                language.</p>
-
-            <p>The videos are posted on different platforms such as: Youtube, Instagram and Facebook, the latter being
-                the main one. In this sense, the videos were disseminated in media such as television (university
-                television of La Paz), with the aim of
-                making the information visible and reaching more people in the country.</p>
-
-            <p>In the future, we would like to implement videos in sign language, as well as include other topics of
-                social importance and educational material from different academic areas. </p>
-
-            <h3 class="text-center py-2 text-morado">
-                    "LIGA INTERNACIONAL DE DEBATE 2021" 
-            </h3>
-            <p>At the beginning of July, the "Liga Internacional de Debate 2021" was organized by "Escuela Debate" in collaboration with other organizations as iGEM Bolivia. Members of iGEM Bolivia participated as speakers (quarterfinals), panel judges (final) and main judges (semi-final) on topics of debate biotechnology the genetic design of babies, genetic modification of humans and the use of genetically modified crops.</p>
-        </div>
     </div>
+</header>
+    <style>
+        .dropdown-item:focus,
+        .dropdown-item:hover {
+            background-color: var(--azul);
+        }
+    </style>
+<body id="body">
 
-    <div class="bg-inv">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-xs-12 col-sm-12 col-md-6 mb-4 card-certificados">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="3000">
-                                <img src="https://2021.igem.org/wiki/images/3/3e/T--Bolivia--excellence_in_another_area_img2.png.png" class="d-block w-100" alt="...">
+    <section>
+        <div class="">
+            <div class="row p-0 m-0">
+                <div class="d-none  col-md-3  d-md-flex justify-content-center">
+                    <div class="menulateral">
+                        <a href="#experimentalDesing" class="box-icon box-icon-select" id="pestania1">
+                            <div class="diviconMenu ">
+                                <img src="debate.png" alt="" class="iconMenu">
                             </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="https://2021.igem.org/wiki/images/b/b4/T--Bolivia--excellence_in_another_area_img3.png.png" class="d-block w-100" alt="...">
+                            <div class="text-menu">
+                                CLUB DE DEBATE <br> 
+                                BOLIVIA
                             </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="https://2021.igem.org/wiki/images/7/77/T--Bolivia--excellence_in_another_area_img4.png.png" class="d-block w-100" alt="...">
+                        </a>
+                        <a href="#expectedResult" class="box-icon" id="pestania2">
+                            <div class="diviconMenu">
+                                <img src="viaje.png"" class="iconMenu">
                             </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="https://2021.igem.org/wiki/images/e/ee/T--Bolivia--excellence_in_another_area_img5.png.png" class="d-block w-100" alt="...">
+                            <div class="text-menu">
+                                LIGA INTERNACIOAL DE<br>
+                                DEBATE 2021
+                            </div>
+                        </a>
+                        <div class="box-icon" id="pestania3">
+                            <div class="diviconMenu">
+                                <img src="idioma.png" alt="" class="iconMenu">
+                            </div>
+                            <div class="text-menu">
+                                Others: BIOMUN and <br>
+                                Debate Hispano
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-6">
-                    <h4 class="text-center text-morado py-3">Here is a video of our most representative judges of the tournament.</h4>
-                    <video src="https://2021.igem.org/wiki/images/3/36/T--Bolivia--Excellence_in_another_area_video1.mp4.mp4" controls
-                        class="w-100" id="video1"></video>
-                        <div class="btnVideo" id="btnV1" onclick="reproVideo(1)">
-                            <div class="center">
-                                <div class="pulse">
-                                    <i class="fas fa-play"></i>
+
+                <div class="col-md-9" id="experimentalDesing">
+                    <div class="container">
+                            <p>"Club de debate Bolivia" was formed within Bolivia team with the purpose of addressing false or wrong perception about science in Bolivia. We had meetings as a team and decided that our Club could fit perfectly in the criterion of Excellence in Another Area for the 2021 iGEM competition. Why do we consider ourselves Excellent in debate? Because we have learned, trained and participated in tournaments both as judges and as speakers, managing to advance to the finals in the category of judges.</p>
+                
+                            <p>The first activities we had as a club were virtual classes given by two of our members who already had experience in debates. They taugh The first activities we had as a club were virtual classes given by two of our members who already had experience in debates. They taught to 27 club members from our team. We decided to adopt the <strong>Zig-Zag Model</strong> to practice debates, which not only evaluates speakers, it also evaluates the judges. </p>
+
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="imgen1">
+                                        <img src="https://2021.igem.org/wiki/images/f/fd/T--Bolivia--excellence_in_another_area_img12.png.png" alt="">
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-4">
+                                    <div class="boton1">
+                                        <a href=""><img src="https://2021.igem.org/wiki/images/e/ec/T--Bolivia--excellence_in_another_area_img13.png.png" alt="" class="botonimg click-img "></a>
+                                    </div>
                                 </div>
                             </div>
+                            <p class="pt-5">To <strong>strengthen the critical thinking and speaking skills</strong> of our members, 16 internal debates were established with social and synthetic biology topics.</p>
+                            <p>Below is a video of an internal debate with the Zig-Zag model modified where the topic was: Should Bolivia allow the use of Genetically Modified Organisms?</p>
+                            <div class="row pt-5">
+                                <div class="col-xs-12 col-sm-12 col-lg-4 card-videos mb-4">
+                                    <h3 class="text-morado text-center">PART 	I
+                                        <br> Debate: Speakers</h3>
+                                    <p>The affirmative part faces the negative counterpart
+                                        How is the winning team chosen? 
+                                        <ul>
+                                            <li>Consistent arguments and must show evidence</li>
+                                            <li>Formulation of questions that favor your arguments.</li>
+                                            <li>Domain of the topic.</li>
+                                            <li>Consistent conclusion</li>
+                                            <li>Respect the format, that is, if you must defend your arguments, you cannot refute.</li>
+                                            <li>Do not speak fallacies.</li>
+                                        </ul>                                        
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-lg-8">
+                                    <video src="https://2021.igem.org/wiki/images/3/36/T--Bolivia--Excellence_in_another_area_video1.mp4.mp4"
+                                        id="video1" controls class="w-100"></video>
+                                    <div class="btnVideo" id="btnV1" onclick="reproVideo(1)">
+                                        <div class="center">
+                                            <div class="pulse">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-5">
+
+                                <div class="col-xs-12 col-sm-12 col-lg-8 mb-md-4">
+                                    <video src="https://2021.igem.org/wiki/images/c/c6/T--Bolivia--Excellence_in_another_area_video2.mp4.mp4"
+                                        id="video2" controls class="w-100"></video>
+                                    <div class="btnVideo" id="btnV2" onclick="reproVideo(2)">
+                                        <div class="center">
+                                            <div class="pulse">
+                                                <i class="fas fa-play"></i>
+            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-lg-4  card-videos">
+                                    <h3 class="text-morado text-center">PART 	II</h3>
+                                    <h5 class="text-morado text-center">Adjudication of the debate: Juedges </h5>
+                                    <p>The panel judges are evaluated by the head judge and the panel judges evaluate the head judge. 
+                                    Characteristics of a good judge: 
+                                    <ul>
+                                        <li>Consistency in your statements when choosing a winning team.</li>
+                                        <li>Identify fallacies</li>
+                                        <li>Evaluates that the model is followed.</li>
+                                    </ul>
+                                        
+                                    </p>
+                                </div>
+            
+                            </div>
+
+                            <p>As a result of the internal practices we had, we decided to participate in debate tournaments. The first tournament we participated was Liga Nacional del Debate Peru, where our members participated as judges. With more experience, we participated at the Liga Internacional de Debate 2021, which is presented below.</p>
+                
+                            <h3 class="text-center py-2 text-morado">"LIGA INTERNACIONAL DE DEBATE 2021" </h3>
+                            <p>In July, the Liga Internacional de Debate 2021 was organized by the <strong>Escuela Debate – Países Andinos 2021</strong>, in collaboration with other 35 organizations and our team. Members of Bolivia team, participated as speakers and reached quarterfinals. Others were panel judges and reached the final. We also had members participating as main judges who arrived to semi-finals.  The topics that were debated included: biotechnology the genetic design of babies, genetic modification of humans and the use of genetically modified crops.</p>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-5">
+                            <div class="imgen1">
+                                <img src="https://2021.igem.org/wiki/images/6/61/T--Bolivia--excellence_in_another_area_img14.png.png" alt="">
+                            </div>
                         </div>
+                        <div class="col-7">
+                            <p>This year the <strong>Liga Internacional de Debate 2021</strong> brought together <strong>192 speakers and more than 100</strong> judges from Peru, Ecuador, Argentina, Guatemala, Venezuela, Colombia, Chile and Bolivia. </p>
+                        </div>
+                    </div>
+                
+                    <div class="row pt-5">
+                                <div class="col-xs-10 col-sm-10 col-md-4 mb-3 card-certificados">
+                                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active" data-bs-interval="3000">
+                                                <img src="https://2021.igem.org/wiki/images/3/3e/T--Bolivia--excellence_in_another_area_img2.png.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item" data-bs-interval="3000">
+                                                <img src="https://2021.igem.org/wiki/images/b/b4/T--Bolivia--excellence_in_another_area_img3.png.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item" data-bs-interval="3000">
+                                                <img src="https://2021.igem.org/wiki/images/7/77/T--Bolivia--excellence_in_another_area_img4.png.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item" data-bs-interval="3000">
+                                                <img src="https://2021.igem.org/wiki/images/e/ee/T--Bolivia--excellence_in_another_area_img5.png.png" class="d-block w-100" alt="...">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-7">
+                                    <h7 class="text-center text-morado p-3">Here is a video of our most representative judges of the tournament</h7>
+                                    <video src="https://2021.igem.org/wiki/images/e/eb/T--Bolivia--Excellence_in_another_area_video3.mp4.mp4" controls
+                                        class="w-100" id="video1"></video>
+                                        <div class="btnVideo" id="btnV1" onclick="reproVideo(1)">
+                                            <div class="center">
+                                                <div class="pulse">
+                                                    <i class="fas fa-play"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                    </div>
+                
+                    <h4 class="text-center text-morado pt-4">HOW WAS YOUR EXPERIENCE IN THE DEBATES OF THE " LIGA INTERNACIONAL DE DEBATE 2021”?
+                    </h4>    
+                    <div class="card_co">
+                            <div class="card__perfil">
+                                    <div class="card__nombre">
+                                        <img src="https://2021.igem.org/wiki/images/7/7b/T--Bolivia--excellence_in_another_area_img11.png.png" alt="">
+                                        <h4 class="text-morado">Amiel Quino</h4>
+                                        <p>Organizer</p>
+                                    </div>
+                                    <hr>
+                                    <div class="card__descripcion">
+                                        <p>It has been a pleasant experience to be part of the organization of this tournament. I developed skills in argumentation and rhetoric, even more so for the context we live in. I participated in Liga Nacional  de Debate Perú as a judge, but in this opportunity I was able to be an organizer and suggest synthetic biology topics.</p>
+                                    </div>
+                            </div>
+                            <div class="card__perfil">
+                                    <div class="card__nombre">
+                                        <img src="https://2021.igem.org/wiki/images/5/57/T--Bolivia--excellence_in_another_area_img6.png.png" alt="">
+                                        <h4 class="text-morado">Alejandra Guzmán</h4>
+                                        <p> Judge</p>
+                                    </div>
+                                    <hr>
+                                    <div class="card__descripcion">
+                                        <p>I have participated as a judge and speaker in debates as a Bolivian team member and independent. These roles have taught me to confront opposing ideas with arguments and evidence. This is because discussions issues surrounding biotechnology in our country can quickly become saturated by emotions that stem from a lack of factual information or misinformation in general.</p>
+                                    </div>
+                            </div>
+                            <div class="card__perfil">
+                                    <div class="card__nombre">
+                                        <img src="https://2021.igem.org/wiki/images/b/b2/T--Bolivia--excellence_in_another_area_img9.png.png" alt="">
+                                        <h4 class="text-morado">Damaris Sarmiento</h4>
+                                        <p>Judge</p>
+                                    </div>
+                                    <hr>
+                                    <div class="card__descripcion">
+                                        <p>It was a unique learning experience. Not only did I hear about the research and dedication to the argumentation by the speakers from my role as a main judge and panelist, but I also better understood the purpose of the forums. The importance of biotechnology lies at the economic, political, lifestyle, psychological levels.</p>
+                                    </div>
+                            </div>
+                            <div class="card__perfil">
+                                    <div class="card__nombre">
+                                        <img src="https://2021.igem.org/wiki/images/d/d3/T--Bolivia--excellence_in_another_area_img7.png.png" alt="">
+                                        <h4 class="text-morado">Jhoseline Mixto</h4>
+                                        <p>Speaker</p>
+                                    </div>
+                                    <hr>
+                                    <div class="card__descripcion">
+                                        <p>I participated in the tournament as a speaker, although I did not participate in any biotechnology debates. I was as an audience member for some topics, such as the genetic design of babies. Despite the fact that my position was always against, the affirmative team almost managed to change my opinion because of the arguments they presented.</p>
+                                    </div>
+                            </div>
+                            <div class="card__perfil">
+                                    <div class="card__nombre">
+                                        <img src="https://2021.igem.org/wiki/images/7/78/T--Bolivia--excellence_in_another_area_img8.png.png" alt="">
+                                        <h4 class="text-morado" >Consuelo Loayza</h4>
+                                        <p>Judge</p>
+                                    </div>
+                                    <hr>
+                                    <div class="card__descripcion">
+                                        <p>From an approach linked to my career, forums and debates are very didactic to understand and reflect on many of the topics that are not normally debated. My experience regarding these debates has been very interesting in the aspect of expression and dialectics. I have noticed that these aspects are very important to understand during the time of human development. Above all, to interpret and understand ideas is the basis for communication, and these forums have impressed me a great deal.</p>
+                                    </div>
+                            </div>   
+                            <div class="card__perfil">
+                                    <div class="card__nombre">
+                                        <img src="https://2021.igem.org/wiki/images/f/f5/T--Bolivia--excellence_in_another_area_img10.png.png" alt="">
+                                        <h4 class="text-morado">Lia Carrión </h4>
+                                        <p>Judge</p>
+                                    </div>
+                                    <hr>
+                                    <div class="card__descripcion">
+                                        <p>The exercise of presenting ideas from different perspectives, even if some of the presentations are not scientifically correct, made for an ideal discussion to analyze the arguments involved, break them down and understand how the position of the other side. To have the reason is not the goal.</p>
+                                    </div>
+                            </div>        
+                    </div>
+                    <p>We also received the <strong>invitation from BIOMUN</strong>, an event to be held in mid-October, where we will participate with the <strong>United Nations format</strong> in the area of BIOTECH.</p>
+                    <p><strong>Eight</strong> of our club members participated in the <strong>Debate Hispano</strong>, a collaboration that took place with other iGEM teams. <strong>Six of them in the role of judges</strong> and two of them as speakers. In addition, <strong>one of our members trained the eight participating </strong> teams in the Zig-Zag format. More details can be found in the collaboration link of  Bolivia team.</p>
+
+                    <p>We want to thanks the Escuela Debate – Paises Andinos 2021 for giving us the opportunity to participate in the Liga Internacional de Debate 2021, and BIOMUN for inviting us.</p>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class=" py-1">
-        <div class="container">
-            <h4 class="text-center text-morado p-5">
-                OW WAS YOUR EXPERIENCE IN THE DEBATES OF THE " LIGA INTERNACIONAL DE DEBATE 2021”?
-            </h4>    
-        </div>
-        <div class="container">
-            <div class="card_co">
-                <div class="card__perfil">
-                    <div class="card__nombre">
-                        <img src="https://2021.igem.org/wiki/images/5/57/T--Bolivia--excellence_in_another_area_img6.png.png" alt="">
-                        <h4 class="text-morado">Alejandra Guzmán</h4>
-                        <p> Judge</p>
-                    </div>
-                    <hr>
-                    <div class="card__descripcion">
-                        <p>I have participated as a judge and speaker in debates within iGEM as well as outside the organization. These roles have taught me to confront opposing ideas with arguments and evidence. This is because discussions issues surrounding biotechnology in our country can quickly become saturated by sentiments that stem from a lack of factual information or misinformation in general.</p>
-                    </div>
-        
-                </div>
-                <div class="card__perfil">
-                    <div class="card__nombre">
-                        <img src="https://2021.igem.org/wiki/images/d/d3/T--Bolivia--excellence_in_another_area_img7.png.png" alt="">
-                        <h4 class="text-morado">Jhoseline Mixto</h4>
-                        <p>Speaker</p>
-                    </div>
-                    <hr>
-                    <div class="card__descripcion">
-                        <p>I participated in the tournament as a speaker, although I did not participate in any biotechnology debates. I was as an audience member for some topics, such as the genetic design of babies. Despite the fact that my position was always against, the affirmative team almost managed to change my opinion because of the arguments they presented.</p>
-                    </div>
-                </div>
-                <div class="card__perfil">
-                    <div class="card__nombre">
-                        <img src="https://2021.igem.org/wiki/images/7/78/T--Bolivia--excellence_in_another_area_img8.png.png" alt="">
-                        <h4 class="text-morado" >Consuelo Loayza</h4>
-                        <p>Judge</p>
-                    </div>
-                    <hr>
-                    <div class="card__descripcion">
-                        <p>From an approach linked to my career, forums and debates are very didactic to understand and reflect on many of the topics that are not normally debated. My experience regarding these debates has been very interesting in the aspect of expression and dialectics. I have noticed that these aspects are very important to understand during the time of human development. Above all, to interpret and understand ideas is the basis for communication, and these forums have impressed me a great deal.</p>
-                    </div>
-                </div>
-                <div class="card__perfil">
-                    <div class="card__nombre">
-                        <img src="https://2021.igem.org/wiki/images/b/b2/T--Bolivia--excellence_in_another_area_img9.png.png" alt="">
-                        <h4 class="text-morado">Damaris Sarmiento</h4>
-                        <p>Judge</p>
-                    </div>
-                    <hr>
-                    <div class="card__descripcion">
-                        <p>It was a unique learning experience. Not only did I hear about the research and dedication to the argumentation by the speakers from my role as a main judge and panelist, but I also better understood the purpose of the forums. The importance of biotechnology lies at the economic, political, lifestyle, psychological levels.</p>
-                    </div>
-                </div>
-                <div class="card__perfil">
-                    <div class="card__nombre">
-                        <img src="https://2021.igem.org/wiki/images/f/f5/T--Bolivia--excellence_in_another_area_img10.png.png" alt="">
-                        <h4 class="text-morado">Lia Carrión </h4>
-                        <p>Judge</p>
-                    </div>
-                    <hr>
-                    <div class="card__descripcion">
-                        <p>The exercise of presenting ideas from different perspectives, even if some of the presentations are not scientifically correct, made for an ideal discussion to analyze the arguments involved, break them down and understand how the position of the other side, where to have the reason is not the goal.</p>
-                    </div>
-                </div>
-
-                <div class="card__perfil">
-                    <div class="card__nombre">
-                        <img src="https://2021.igem.org/wiki/images/7/7b/T--Bolivia--excellence_in_another_area_img11.png.png" alt="">
-                        <h4 class="text-morado">Amiel Quino</h4>
-                        <p>Organizer</p>
-                    </div>
-                    <hr>
-                    <div class="card__descripcion">
-                        <p>It has been a pleasant experience to be part of the organization of this tournament, develop skills in argumentation and rhetoric, even more so for the context we live in.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </section>
+    
 
     
 </body>
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="loadNavbar.js"></script>
 
 <script>
     AOS.init();
 </script>
-
 <script>
     function reproVideo(id) {
 
@@ -261,5 +388,32 @@
         videoPlay.play();
 
     }
+
+</script>
+
+<script>
+    window.addEventListener('scroll', (e) => {
+        let y = window.scrollY;
+
+        if (y >= 500) {
+            document.getElementById('nav').classList.add('my-nav')
+        } else {
+            document.getElementById('nav').classList.remove('my-nav')
+        }
+
+        if (y >= 1950) {
+            document.getElementById('pestania1').classList.remove('box-icon-select')
+            document.getElementById('pestania2').classList.add('box-icon-select')
+        } else {
+            document.getElementById('pestania2').classList.remove('box-icon-select')
+            document.getElementById('pestania1').classList.add('box-icon-select')
+        }
+
+    })
+
+    function navBarColor() {
+        document.getElementById('nav').classList.add('my-nav')
+    }
+
 
 </script>
