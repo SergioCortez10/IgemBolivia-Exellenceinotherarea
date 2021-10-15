@@ -299,6 +299,7 @@ figure {
 
 .card-certificados {
   transition: 0.3s ease-in-out;
+  margin: 0 auto;
 }
 .card-certificados:hover {
   box-shadow: 10px 10px 15px 2px #bfbfbfa3;
@@ -307,7 +308,8 @@ figure {
 }
 
 .card_co {
-  width: 100%;
+  margin: 0 auto;
+  width: 90%;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
@@ -344,12 +346,17 @@ figure {
   align-items: center;
 }
 
+.text-centrado {
+  margin: auto 0;
+}
+
 .card__button {
   text-align: center;
 }
 .card__descripcion p {
   font-size: 14px;
   color: black;
+  line-height: 25px;
 }
 .enlace {
   background: rgb(0, 110, 255);
@@ -531,7 +538,7 @@ figure {
 }
 
 .imgen1 {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 .imgen1 img {
@@ -557,4 +564,344 @@ figure {
 .click-img:hover {
   transform: scale(1.1);
   transition: 0.3s;
+}
+
+.listali {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+.card-bg {
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 18px;
+  box-shadow: 2px 4px 10px 7px var(--bg-celeste);
+}
+.card-bg p {
+  font-size: 14px;
+  line-height: 23px;
+}
+/* ************* BOTON DESCARGA ******************/
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.dedcription-btn {
+  text-decoration: none;
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  border-radius: 30px;
+  background-color: #fcfcfc;
+  color: var(--verde);
+  text-align: center;
+
+  padding: 9px 0;
+  transition: all 0.3s;
+  padding-right: 40px;
+  margin: 20px 5px;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.116);
+}
+
+.dedcription-btn .btn-icon {
+  width: 92px;
+  height: 45px;
+  float: right;
+  position: absolute;
+  border-radius: 30px 30px 30px 0;
+  right: 0px;
+  top: 0px;
+  transition: all 0.3s;
+}
+
+.name-descripeion {
+  position: relative;
+  z-index: 9999;
+}
+
+.btn-icon::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 45px solid #fcfcfc;
+  border-right: 40px solid transparent;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.dedcription-btn:hover .btn-icon {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.dedcription-btn:hover .btn-icon::after {
+  display: none;
+  opacity: 0.1;
+}
+
+.btn-icon i {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  color: #fff;
+}
+
+.dedcription-btn:hover {
+  color: #fff !important;
+}
+
+.descarga {
+  background-color: var(--celeste) !important;
+}
+
+.hover-box {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.my-carousel {
+  width: 70%;
+}
+
+.my-carousel2 {
+  width: 40%;
+}
+
+.img {
+  border-radius: 10px;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.116);
+}
+
+.img:hover {
+  border-radius: 10px;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.116);
+  transform: scale(1.02);
+}
+
+/* BOTON FLOTANTE */
+
+.wrapper {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  bottom: 50px;
+  right: 50px;
+  z-index: 100;
+}
+
+.wrapper .fab {
+  background-color: var(--celeste);
+  width: 50px;
+  height: 50px;
+  position: relative;
+  z-index: 3;
+  border-radius: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fab-animation-reverse 0.4s ease-out forwards;
+}
+
+.wrapper .fab::before,
+.wrapper .fab::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.wrapper .fab::before {
+  width: 4px;
+  height: 18px;
+}
+
+.wrapper .fab::after {
+  width: 18px;
+  height: 4px;
+}
+
+.wrapper .fac {
+  width: 32px;
+  height: 150px;
+  border-radius: 64px;
+  position: absolute;
+  background: #fff;
+  z-index: 2;
+  padding: 0.5rem 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  top: -110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: opacity 0.2s ease-in, top 0.2s ease-in, width 0.1s ease-in;
+}
+
+.wrapper .fac a {
+  color: var(--icon-color);
+  opacity: 0.8;
+}
+
+.wrapper .fac a:hover {
+  transition: 0.2s;
+  opacity: 1;
+  color: var(--verde);
+}
+
+.wrapper input {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  opacity: 0;
+}
+
+.wrapper input:checked ~ .fab {
+  animation: fab-animation 0.4s ease-out forwards;
+}
+
+.wrapper input:checked ~ .fac {
+  width: 32px;
+  height: 150px;
+  animation: fac-animation 0.4s ease-out forwards 0.1s;
+  top: -180px;
+  opacity: 1;
+}
+
+@keyframes fab-animation {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+
+  20% {
+    transform: rotate(60deg) scale(0.93);
+  }
+
+  55% {
+    transform: rotate(35deg) scale(0.97);
+  }
+
+  80% {
+    transform: rotate(48deg) scale(0.94);
+  }
+
+  100% {
+    transform: rotate(45deg) scale(0.95);
+  }
+}
+
+@keyframes fab-animation-reverse {
+  0% {
+    transform: rotate(45deg) scale(0.95);
+  }
+
+  20% {
+    transform: rotate(-15deg);
+  }
+
+  55% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-3deg);
+  }
+
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}
+
+@keyframes fac-animation {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  33% {
+    transform: scale(0.95, 1.05);
+  }
+
+  66% {
+    transform: scale(1.05, 0.95);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* end flotante */
+
+.my-slider {
+  width: 100%;
+}
+
+/* MEDIAS  */
+@media (max-width: 990px) {
+  .menuLat3 {
+    width: 13%;
+    position: fixed;
+    top: 20%;
+    /* background-color: #00507D; */
+    border-right: 5px solid var(--verde);
+    display: flex;
+    /* align-items     : center; */
+    justify-content: center;
+    padding-top: 20px;
+    height: 250px;
+    left: 5%;
+    opacity: 0;
+  }
+
+  section {
+    margin-left: 0;
+    padding-left: 0%;
+    padding-right: 0;
+  }
+
+  .lista {
+    margin-top: 30px;
+  }
+
+  .wrapper {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 425px) {
+  .name-descripeion {
+    font-size: 12px;
+  }
+}
+
+.fa-chevron-right,
+.fa-chevron-left {
+  font-size: 40px;
 }
